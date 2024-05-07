@@ -37,7 +37,7 @@ const Login = () => {
         'Content-Type': 'application/json'
       }
     }
-    const response = await fetch('http://3.129.191.211/api/21122/posts', fetchOptions)
+    const response = await fetch('http://3.129.191.211/api/21122/login', fetchOptions)
     const data = await response.json()
 
     if (response.ok) {
