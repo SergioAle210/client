@@ -10,7 +10,7 @@ const Blog = () => {
   const { fetchData } = useApi()
 
   const fetchPost = async () => {
-    await fetchData('http://127.0.0.1:21122/posts').then(response => {
+    await fetchData('http://3.129.191.211/api/21122/posts').then(response => {
       if (response.data && Array.isArray(response.data)) {
         setPosts(response.data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
       } else {

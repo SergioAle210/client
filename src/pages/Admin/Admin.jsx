@@ -27,7 +27,7 @@ const Admin = () => {
   const [isUpdate, setIsUpdate] = useState(false)
 
   const fetchPost = async () => {
-    await fetchData('http://127.0.0.1:21122/posts').then(response => {
+    await fetchData('http://3.129.191.211/api/21122/posts').then(response => {
       if (response.data && Array.isArray(response.data)) {
         setPosts(response.data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
       } else {
@@ -42,7 +42,7 @@ const Admin = () => {
   }, [])
 
   const handleDelete = postId => {
-    fetchData(`http://127.0.0.1:21122/posts/${postId}`, { method: 'DELETE' })
+    fetchData(`http://3.129.191.211/api/21122/posts/${postId}`, { method: 'DELETE' })
       .then(() => setPosts(posts.filter(post => post.id !== postId)))
       .catch(err => console.error('Error deleting post:', err)) // Añadir manejo de errores
   }
@@ -80,7 +80,7 @@ const Admin = () => {
   const savePost = async (formData) => {
     const { title, content, homeTeam, awayTeam, homeScore, awayScore, imageUrl } = formData
     const method = values.id ? 'PUT' : 'POST'
-    const url = values.id ? `http://127.0.0.1:21122/posts/${values.id}` : 'http://127.0.0.1:21122/posts'
+    const url = values.id ? `http://3.129.191.211/api/21122/posts/${values.id}` : 'http://3.129.191.211/api/21122/posts'
     console.log('Saving post with method:', method, 'and values:', formData)
 
     await fetchData(url, {
