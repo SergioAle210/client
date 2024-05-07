@@ -1,0 +1,11 @@
+.footer {
+    padding: 20px 0px;
+    background-color: darkred;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: yellow;
+    text-shadow: 0 0 10px orange, 0 0 20px red;
+    font-weight: bold;
+    width: 100%;
+  }

@@ -1,0 +1,27 @@
+nav {
+    background-color: darkred;
+    padding: 10px;
+    text-align: center;
+  }
+  
+nav a {
+    margin-right: 10px;
+    cursor: url("src/assets/images/mini.png"), auto;
+    color: yellow;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+  

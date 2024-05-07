@@ -1,0 +1,49 @@
+aside {
+  width: 400px; /* Tamaño fijo para el formulario */
+  height: 300px;
+  padding: 30px;
+  margin: 100px auto; /* Centrar el formulario en la página */
+  background-color:#e7903c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login .title {
+  font-family: monospace;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2b0000;
+}
+
+.login .error-message {
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: #05050533;
+  border-radius: 5px;
+  width: 80%;
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  aside {
+    width: 90%; /* Se adapta al ancho de la pantalla */
+    height: auto; /* Altura automática para adaptarse al contenido */
+    padding: 20px;
+    margin: 50px auto; /* Menor margen para maximizar el espacio */
+  }
+
+  .login .title {
+    font-size: 20px; /* Tamaño de fuente reducido */
+  }
+
+  .login .error-message {
+    font-size: 14px; /* Tamaño de fuente más pequeño para mensajes de error */
+    padding: 8px 10px; /* Padding ajustado */
+  }
+}
